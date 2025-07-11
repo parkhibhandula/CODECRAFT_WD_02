@@ -1,65 +1,108 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(15, 4, 52);
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-image: url('/images/outrun-neon-dark-background-purple-2560x1080-4523.jpg');
-    background-size: cover;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(15, 4, 52);
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url('/images/outrun-neon-dark-background-purple-2560x1080-4523.jpg');
+  background-size: cover;
+  background-position: center;
 }
-.logo{
-    display: flex;
-    align-items: center;
+
+/* Responsive Text Size Example: clamp(min, preferred, max) */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  margin: 1% 2% 2% 2%;
+  font-weight: bolder;
+  font-size: clamp(1.2rem, 3vw, 2rem); /* responsive text */
 }
-nav a{
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    padding: 10px;
+
+.logo {
+  display: flex;
+  align-items: center;
 }
-nav{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    height: 20%;
-    margin: 1% 2% 2% 2%;
-    font-weight: bolder;
-    font-size: xx-large;
+
+nav button {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 10px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem); /* responsive button text */
 }
-nav i{
-    margin-right: 3%;
+
+nav i {
+  margin-right: 3%;
 }
-.main, .stop{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60%;
-    font-size: 200%;
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* responsive */
+  gap: 2%;
 }
-.main div , .stop div{
-    height:40%;
-    width: 15%;
-    border-radius: 10px;
-    margin-left: 2%;
-    background-color:rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow:0px 1px 5px 0px;;
+
+.stop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* responsive */
 }
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.main div {
+  height: 40%;
+  width: 15%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 5px 0px;
+  text-align: center;
 }
-.buttons button{
-  background-color:transparent;
+
+.stop div {
+  height: 40%;
+  width: 15%;
+  border-radius: 10px;
+  margin-left: 2%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 5px 0px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: transparent;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -68,6 +111,19 @@ nav i{
 
 .buttons i {
   color: white;
-  font-size: 3rem; /* adjust as needed */
+  font-size: clamp(1.5rem, 6vw, 3rem); /* responsive icon */
 }
 
+.lapsrec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.2rem, 3.5vw, 2rem); /* responsive */
+}
+
+li {
+  margin: 10% 0 5% 0;
+  list-style: none;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* responsive lap list */
+}

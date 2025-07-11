@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/style.css">
-    <title>StopWatch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style.css">
+  <title>StopWatch</title>
 </head>
+
 <body onload="timeset()">
   <nav>
-   <div class="logo"> <i class="fa-solid fa-stopwatch"></i>
-    <h1>TimeSnap</h1></div>
-    <a href="#clock">Clock</a>
+    <div class="logo"> <i class="fa-solid fa-stopwatch"></i>
+      <h1>TimeSnap</h1>
+    </div>
+   <button id="clock-stop" onclick="clockmode()">Clock</button>
   </nav>
   <div class="stop">
     <div class="sh">00</div>
@@ -19,26 +24,36 @@
     <div class="ss">00</div>
     <div class="sms">000</div>
   </div>
-   <div class="buttons">
-   <div class="first-btn">
-  <button class="start-pause" onclick="change()">
-    <i class="fa-solid fa-circle-play fa-lg"></i>
-  </button>
-</div> 
+  <div class="buttons">
+    <div class="first-btn">
+      <button class="start-pause" onclick="change()">
+        <i class="fa-solid fa-circle-play fa-lg"></i>
+      </button>
+    </div>
 
-<div class="sec-btn">
-  <button class="reset-lap" onclick="laps()">
-    <i class="fa-solid fa-rotate-right fa-lg"></i>
-  </button>
-</div>
+    <div class="sec-btn">
+      <button class="reset-lap" onclick="reset()">
+        <i class="fa-solid fa-rotate-right fa-lg"></i>
+      </button>
+      <button class="reset-flag" onclick="lapcount()">
+        <i id="flag" class="fa-solid fa-flag fa-lg" style="visibility: hidden;"></i>
+      </button>
+      <br>
+    </div>
   </div>
-   <div class="main" id="clock">
-    <div class="hour">hour</div>
+  <div class="lapsrec">
+    <ul id="laps"></ul>
+  </div>
+
+  
+  <div class="main" id="clock" style="display: none;">
+    <div class="hour"></div>
     <div class="min">min</div>
     <div class="sec">secs</div>
     <div class="ms">mili</div>
   </div>
- 
+
   <script src="/script.js"></script>
 </body>
+
 </html>
